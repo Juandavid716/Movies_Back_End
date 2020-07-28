@@ -34,4 +34,9 @@ app.post("/", async (req, res) => {
   });
 });
 
+app.delete("/:id", async (req, res) => {
+  let x = await Usuarios.findByIdAndDelete(req.params.id);
+  res.json({ message: "User borrado" });
+  console.log(x);
+});
 module.exports = app;
