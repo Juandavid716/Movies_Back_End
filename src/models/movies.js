@@ -7,12 +7,15 @@ const noteSchema = new Schema(
       type: String,
       required: true,
     },
-
+    year: String,
     rating: Number,
+    poster: String,
     date: {
       type: Date,
       default: Date.now,
     },
+    userSelected: String,
+    titlecomment: String,
   },
   {
     timestamps: true,
